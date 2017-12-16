@@ -1,47 +1,95 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* Base code C */
-int main(){
+#include <stdbool.h>
+#define stacksize 1000002
+struct stack{
+    int top;
+    int item[stacksize];
+};
+void push(struct stack *s,int item)
+{
+    if(s->top==stacksize-1){
+        printf("Stack overflow");
+    }
+    else{
+        s->top++;
+        s->item[s->top]=item;
+    }
+}
+int isEmpty(struct stack *s){
+    return (s->top==-1)?1:0;
+}
+int pop(struct stack *s){
+    if(s->top==-1)
+    {
+        printf("stack underflow");
+        return -1;
+    }
+    else{
+        int item=s->item[s->top];
+        s->top--;
+        return item;
+    }
+}
+int getTop(struct stack *s){
+    if(s->top==-1){
+        printf("empty stack");
+        return -1;
+    }
+    else{
+        return s->item[s->top];
+    }
+}
+
+int main()
+{
     int n;
-    long long int ar[1000001];
     scanf("%d",&n);
-    /*  accept input  */
-    for(int i=0;i<n;i++)
+    long long int ar[n+1];
+    int x[n+1],y[n+1];
+    for(int i=1;i<=n;i++)
     {
         scanf("%lld",&ar[i]);
-    }
-    for(int i=0;i<n;i++)
+    }   
+    struct stack s;
+    /* Compute x[i] */
+    for(int i=1;i<=n;i++)
     {
-        printf("%lld ",ar[i]);
+        while(isEmpty(&s)!=1){
+            int del;
+            if(ar[i]>=ar[getTop(&s)])
+            del=pop(&s);
+        }
+        if(isEmpty(&s)==1){
+            x[i]=-1;
+        }
+        else{
+            x[i]=getTop(&s);   
+        }
+        push(&s,i);
     }
-    int temp[1000001];
-    /* process input */
-    /* for each i there is an x */
-    for(int i=0;i<n;i++){
-        int max=-1,min=-1;
-        /* Compute X */
-       for(int j=i-1;j>=0;j--)
-       {
-           if(ar[j]>ar[i])
-           {
-               max=j+1;
-               break;
-           }
-       }
-       /* Compute y  */
-       for(int j=i+1;j<n;j++)
-       {
-           if(ar[j]>ar[i]){
-                min=j+1;
-                break;
-           }
-       }
-      
-      printf("%d ",max+min);
+    while(isEmpty(&s)!=1){
+        int del=pop(&s);
     }
-    /* for(int i=0;i<n;i++)
+    for(int i=n;i>=1;i--)
     {
-        printf("%d ",temp[i]);
-    } */
-    return 0;
+        printf("%lld",ar[getTop(&s)]);
+        while(isEmpty(&s)!=1){
+            int del;
+            if(ar[i]>=ar[getTop(&s)])
+         del=pop(&s);
+        }
+        if(isEmpty(&s)==1){
+            y[i]=-1;
+        }
+        else{
+            y[i]=getTop(&s);   
+        }
+        push(&s,i);
+    }
+    for(int i=1;i<=n;i++){
+int yello = y[i]+x[i];
+        printf("%d ",yello);
+    }
+return 0;
 }
