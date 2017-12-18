@@ -4,6 +4,11 @@
         "bitset": "cpp",
         "initializer_list": "cpp",
         "utility": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "istream": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "ostream": "cpp"
     }
 }
