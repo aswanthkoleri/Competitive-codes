@@ -16,6 +16,7 @@ int main(){
         while(j>-1 && key<ar[j]){
             ar[j+1]=ar[j];
             j=j-1;
+            
         }
         ar[j+1]=key;
     }
