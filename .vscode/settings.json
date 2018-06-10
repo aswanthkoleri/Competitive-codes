@@ -18,6 +18,12 @@
         "sstream": "cpp",
         "streambuf": "cpp",
         "thread": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "forward_list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "optional": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp"
     }
 }
