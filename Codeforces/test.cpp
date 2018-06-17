@@ -1,19 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int n;
-    char s[1000];
-    char temp;
-    cin>>temp;
-    int i=0;
-    while(temp != '}'){
-        if( temp != ' '){
-            s[i++]=temp;    
-            cin>>temp;
-        }
+    int n=3;
+    int m,sum=0;
+    for(int i=0;i<n;i++){
+        cin>>m;
+        sum+=m;
     }
-    s[i++] = '}';
-    cout<<s;
-
+    cout<<sum;
     return 0;
 }
