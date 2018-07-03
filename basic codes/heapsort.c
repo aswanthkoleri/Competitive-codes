@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int heap[21];
+int temp[]
 int heapsize;
 void heapify(int i){
 	int l=2*i;
@@ -25,6 +26,7 @@ void heapify(int i){
 void heapsort(){
 	while(heapsize!=1){
 		int temp=heap[1];
+		
 		heap[1]=heap[heapsize];
 		heap[heapsize]=temp;
 		heapsize--;
