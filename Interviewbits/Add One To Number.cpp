@@ -3,7 +3,6 @@ using namespace std;
 vector<int> plusOne(vector<int> &A) {
     int n=A.size()-1;
     A[n]+=1;
-    /* cout<<A[n]; */
     while(A[n]>9 && n>0 )
     {
         A[n]=0;
@@ -18,7 +17,6 @@ vector<int> plusOne(vector<int> &A) {
     while(A[0]==0){
         A.erase(A.begin());
     }
-    
     return A;
 }
 typedef long long ll;
