@@ -1,38 +1,53 @@
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-
-int maxSpecialProduct(vector<int> &A) {
-    int maxNo=0;
-    for(int i=1;i<A.size()-1;i++){
-        int j=i-1;
-        while(A[i]>=A[j] && j>=0 ){
-            j--;
+vector<int> leftGreatestNumberIndex(vector< int> &A){
+    int n = A.size();
+    vector< int> leftGreatestIndex(n,0);
+    stack<int> s;
+    for(int i=n-1;i>=0;i--){
+        /* IF stack is not empty and the current element is the greater than the element situated at the index on the top of the stack  */
+        while(!s.empty() && A[i] > A[s.top()] ){
+            /* Then that element is the nearest left greatest */
+            /* So store its index in the leftGreatestIndex array */
+            int r = s.top();
+            s.pop();
+            leftGreatestIndex[r] = i;
+            /* Here the Index of the left greatest number with nearest Index is stored */
         }
-        if(j<0){
-            j=0;
-        }
-        int k=i+1;
-        while(A[i]>=A[k] && k<A.size()){
-            k++;
-        }
-        if(k>A.size()){
-            k=0;
-        }
-        maxNo=max(maxNo,j*k);
+        /* If stack is empty */
+        s.push(i);
     }
-    return maxNo;
+    return leftGreatestIndex;
 }
 
-int main(){
-    int n;
-    cin>>n;
-    vector<int> A;
+vector< int> rightGreatestNumberIndex(vector< int> &A){
+    int n = A.size();
+    vector< int> rightGreatestIndex(n,0);
+    stack<int> s;
     for(int i=0;i<n;i++){
-        int k;
-        cin>>k;
-        A.push_back(k);
+        /* IF stack is not empty and the current element is the greater than the element situated at the index on the top of the stack  */
+        while(!s.empty() && A[i] > A[s.top()] ){
+            /* Then that element is the nearest right greatest */
+            /* So store its index in the rightGreatestIndex array */
+            int r = s.top();
+            s.pop();
+            rightGreatestIndex[r] = i;
+            /* Here the Index of the right greatest number with nearest Index is stored */
+        }
+        /* If stack is empty */
+        s.push(i);
     }
-    cout<<maxSpecialProduct(A);
-    return 0;
+    return rightGreatestIndex;
+}
+
+long long int Solution::maxSpecialProduct(vector<int> &A) {
+    vector<int> leftGreatestNumberIndexes = leftGreatestNumberIndex(A);
+    vector<int> rightGreatestNumberIndexes = rightGreatestNumberIndex(A);
+   long long  int maxValue=0;
+    for(int i=0;i<A.size();i++){
+       long long  int specialProduct=(long)leftGreatestNumberIndexes[i]*(long)rightGreatestNumberIndexes[i];
+            if(specialProduct > maxValue )
+            {
+                maxValue =specialProduct;
+            }
+    }
+    return maxValue;
 }
