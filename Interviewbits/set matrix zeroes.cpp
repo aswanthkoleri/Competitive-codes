@@ -22,7 +22,7 @@ void Solution::setZeroes(vector<vector<int> > &A) {
     /* Now setting zeroes in all of the cols and rows which are suppose to have zeroes */
     for(int i=1;i<m;i++){
         for(int j=1;j<n;j++){
-            if(A[0][j]==0 || A[i][j]==0){
+            if(A[0][j]==0 || A[i][0]==0){
                 A[i][j]=0;
             }
         }
