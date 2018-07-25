@@ -52,3 +52,5 @@ Mkfile.old
 dkms.conf
 
 *a.out
+/Interviewbit netbeans/Interviewbit/build/
+/Interviewbit netbeans/Interviewbit/dist/
