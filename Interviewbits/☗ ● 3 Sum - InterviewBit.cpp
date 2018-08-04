@@ -1,4 +1,4 @@
-int Solution::threeSumClosest(vector<int> &A, int B) {
+aint Solution::threeSumClosest(vector<int> &A, int B) {
 	if(A.size()<3){
 		return 0;
 	}
