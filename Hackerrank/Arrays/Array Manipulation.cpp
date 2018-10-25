@@ -25,7 +25,7 @@ long arrayManipulation(int n, vector<vector<int>> queries) {
                 max=prefixSum;
             }
         }
-    cout<<max<<endl;
+    // cout<<max<<endl;
     return max; 
 }
 
