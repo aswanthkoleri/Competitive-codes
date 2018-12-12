@@ -14,12 +14,12 @@ def comb(n,i):
     if len(str(ans))>9:
 
         newans=str(ans)
-        print("run1")
+        # print("run1")
         # print("orgi : "+newans)
         
         return int(newans[-9:])
     else:
-        print("run2")
+        # print("run2")
         return str(ans)
 
 # Main
