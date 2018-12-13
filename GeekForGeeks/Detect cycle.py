@@ -7,10 +7,6 @@ def creategraph(n, arr, graph):
         graph[arr[i + 1]].append(arr[i])
         i += 2
 
-# Your task is to complete this function
-# Function should return True/False or 1/0
-# Graph(graph) is a defaultict of type List
-# n is no of Vertices's
 def dfs(i,graph,visited,parent):
     visited[i]=True
     # For all adjacent nodes
