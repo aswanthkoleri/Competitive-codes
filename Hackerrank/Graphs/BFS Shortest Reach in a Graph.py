@@ -17,48 +17,38 @@ def main():
         # get start node
         startNode=int(input())
         visited=[False]*(n+1)
-        # temp=graph[startNode]
-        m={}
-        pq=[]
-        # for i in temp:
-        #     if visited[i]==False:
-        #         pq.append(i)
-        #         visited[i]=True
-        visited[startNode]=True
-        m[startNode]=0
-
-        # Find the non connected nodes and push them
-        for i in range(1,n+1):
-            if not graph[i]:
-                # push to the pq
-                pq.append(i)
-                m[i]=-1
-        
-        heapq.heapify(pq)
-        # print("priority queue")
-        # print(pq)
         dist=[]
+        # Find all the adjacent nodes of StartNode and push it into the queue
+        pq=[]
+        m={}
+        # TO track depth 
+        temp=graph[startNode]
+        for i in temp:
+            if visited[i]==False:
+                pq.append(i)
+                m[i]=1
+                visited[i]=True
+        # Now run loop until queue 
         while pq:
-            # print(pq)
-            # print("run")
-            popped=heapq.heappop(pq)
-            # print("popped : "+str(popped))
-            # print(m[popped])
-            # visited[popped]=True
-            if m[popped]>0:
-                dist.append(m[popped]*6)
-            else:
-                dist.append(m[popped])
-            # visited[popped]
-            # for all the adjacent nodes of the popped one 
-            for adj in graph[popped]:
-                # print(adj,end=" ")
-                if visited[adj]==False:
-                    m[adj]=m[popped]+1
-                    visited[adj]=True
-                    heapq.heappush(pq,adj)
-        for i in dist:
-            print(i,end=" ")
+            popped=pq.pop(0)
+            # Search for all the adjacent nodes
+            for i in graph[popped]:
+                if visited[i]==False:
+                    pq.append(i)
+                    m[i]=m[popped]+1
+                    visited[i]=True
+        # Now we have all the depths of the nodes connected to start node
+        # Print the result
+        for i in range(1,n+1):
+            if i!=startNode:
+                if i in m:
+                    print(m[i]*6,end=" ")
+                else:
+                    print(-1,end=" ")
         print()
+                 
+        # for i in dist:
+        #     print(i,end=" ")
+        # print()
 
 main()
