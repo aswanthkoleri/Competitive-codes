@@ -9,7 +9,7 @@
 - [x] Longest Common Subsequence 
 - [x] Longest Increasing Subsequence 
 - [x] Edit Distance 
-- [ ] Minimum Partition 
+- [x] Minimum Partition 
 - [ ] Ways to Cover a Distance 
 - [ ] Longest Path In Matrix 
 - [ ] Subset Sum Problem 

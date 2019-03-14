@@ -3,7 +3,7 @@ def editDistance(str1,str2,m,n):
         return n
     if n==0:
         return m
-    if str1[m]==str2[n]:
+    if str1[m-1]==str2[n-1]:
         return editDistance(str1,str2,m-1,n-1)
     else:
         return 1+min(editDistance(str1,str2,m-1,n-1),
@@ -15,6 +15,6 @@ def main():
     str1=input()
     str2=input()
     # do recursion
-    answer=editDistance(str1,str2,len(str1)-1,len(str2)-1)
+    answer=editDistance(str1,str2,len(str1),len(str2))
     print(answer)
 main()
