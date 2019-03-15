@@ -10,7 +10,7 @@
 - [x] Longest Increasing Subsequence 
 - [x] Edit Distance 
 - [x] Minimum Partition 
-- [ ] Ways to Cover a Distance 
+- [x] Ways to Cover a Distance 
 - [ ] Longest Path In Matrix 
 - [ ] Subset Sum Problem 
 - [ ] Optimal Strategy for a Game 
