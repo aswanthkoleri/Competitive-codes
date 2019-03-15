@@ -11,7 +11,7 @@
 - [x] Edit Distance 
 - [x] Minimum Partition 
 - [x] Ways to Cover a Distance 
-- [ ] Longest Path In Matrix 
+- [x] Longest Path In Matrix 
 - [ ] Subset Sum Problem 
 - [ ] Optimal Strategy for a Game 
 - [ ] 0- 1 Knapsack Problem 
