@@ -12,7 +12,7 @@
 - [x] Minimum Partition 
 - [x] Ways to Cover a Distance 
 - [x] Longest Path In Matrix 
-- [ ] Subset Sum Problem 
+- [x] Subset Sum Problem 
 - [ ] Optimal Strategy for a Game 
 - [ ] 0- 1 Knapsack Problem 
 - [ ] Boolean Parenthesization Problem 
