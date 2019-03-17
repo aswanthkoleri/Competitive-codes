@@ -13,7 +13,7 @@
 - [x] Ways to Cover a Distance 
 - [x] Longest Path In Matrix 
 - [x] Subset Sum Problem 
-- [ ] Optimal Strategy for a Game 
+- [x] Optimal Strategy for a Game 
 - [ ] 0- 1 Knapsack Problem 
 - [ ] Boolean Parenthesization Problem 
 - [ ] Shortest Common Supersequence 
