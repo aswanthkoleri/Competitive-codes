@@ -1,3 +1,15 @@
+lcs=[]
+def longestCommonSubsequence(s1,s2):
+    for i in range(len(s1)):
+        for j in range(len(s2)):
+            if i==0 or j==0:
+                lcs[i][j]=0
+            elif s1[i-1]==s2[j-1]:
+                lcs[i][j]=1+lcs[i-1][j-1]
+            else:
+                lcs[i][j]=max(lcs[i+1][j],lcs[i][j+1])
+    return lcs[len(s1)][len(s2)]
+
 def main():
     # enter string 1
     s1=input()

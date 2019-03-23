@@ -14,9 +14,9 @@
 - [x] Longest Path In Matrix 
 - [x] Subset Sum Problem 
 - [x] Optimal Strategy for a Game 
-- [ ] 0- 1 Knapsack Problem 
+- [x] 0- 1 Knapsack Problem 
 - [ ] Boolean Parenthesization Problem 
-- [ ] Shortest Common Supersequence 
+- [x] Shortest Common Supersequence 
 - [ ] Matrix Chain Multiplication 
 - [ ] Partition problem 
 - [ ] Rod Cutting 
