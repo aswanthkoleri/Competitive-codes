@@ -17,7 +17,7 @@
 - [x] 0- 1 Knapsack Problem 
 - [ ] Boolean Parenthesization Problem 
 - [x] Shortest Common Supersequence 
-- [ ] Matrix Chain Multiplication 
+- [x] Matrix Chain Multiplication 
 - [ ] Partition problem 
 - [ ] Rod Cutting 
 - [ ] Coin change problem 
