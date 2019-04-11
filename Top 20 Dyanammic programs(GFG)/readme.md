@@ -23,8 +23,8 @@ The problems are done from a tutorial about the Top 20 Dynammic programs. Follow
 - [ ] Boolean Parenthesization Problem 
 - [x] Shortest Common Supersequence 
 - [x] Matrix Chain Multiplication 
-- [ ] Partition problem 
-- [ ] Rod Cutting 
+- [x] Partition problem 
+- [x] Rod Cutting 
 - [ ] Coin change problem 
 - [ ] Word Break Problem 
 - [ ] Maximal Product when Cutting Rope 
