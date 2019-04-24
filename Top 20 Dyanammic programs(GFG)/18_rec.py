@@ -9,7 +9,6 @@ def dice(m,n,x):
         summation=0
         for i in range(1,m+1):
             summation+=dice(m,n-1,x-i)
-        
         return summation
 def main():
     [m,n,x] = list(map(int,input().split()))

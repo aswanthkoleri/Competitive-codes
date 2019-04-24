@@ -2,19 +2,16 @@
 TABLE = []
 def dice(m,n,x):
     global TABLE
-    if n==0 and x==0:
-        return 1
-    elif n<0 or x<0:
-        return 0
-    else:
-        summation=0
-        for i in range(1,m+1):
-            if TABLE[n-1][x-i]:
-                summation+=TABLE[n-1][x-i]
-            else:
-                summation+=dice(m,n-1,x-i)
-        TABLE[n][x]=summation
-        return summation
+    TABLE[0][0]=1
+    for j in range(1,min(m+1,x+1)): #Table entries for only one dice 
+        TABLE[1][j]=1
+    for i in range(2,n+1): 
+        for j in range(1,x+1): 
+            for k in range(1,min(m+1,j)): 
+                TABLE[i][j]+=TABLE[i-1][j-k]
+    return TABLE[-1][-1] #This is the last element being denoted in python
+ 
+
 def main():
     global TABLE
     [m,n,x] = list(map(int,input().split()))
