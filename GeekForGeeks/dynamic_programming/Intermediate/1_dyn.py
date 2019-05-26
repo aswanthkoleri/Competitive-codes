@@ -18,3 +18,4 @@ if __name__=="__main__":
     result = ((2*m+1)*nCr(2*n,m+n))/(m+n+1)
     print(int(result))
     
+    
