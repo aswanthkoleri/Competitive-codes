@@ -1,5 +1,5 @@
 if __name__=="__main__":
-	n=int(input())	
+	n=int(input())
 	hashMap={}
 	# Construction of hashMap
 	for _ in range(n):
@@ -16,7 +16,7 @@ if __name__=="__main__":
 		elif last not in hashMap[noOfVowels]:
 			hashMap[noOfVowels][last]=[]
 		hashMap[noOfVowels][last].append(word)
-	# Constuct complete duos : same NoOfVowels + same LastVowel 
+	# Constuct complete duos : same NoOfVowels + same LastVowel
 	CompleteDuos=[]
 	# Constuct Semi-Complete duos : same No Of Vowels
 	SemiCompleteDuos=[]
